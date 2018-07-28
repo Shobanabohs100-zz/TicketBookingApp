@@ -168,36 +168,52 @@
                         </button>
                     </div>
                 </div>
-
-                <table id="table_id"
-                    class="display">
-                    <thead>
-                        <tr>
-                            <th>Bus name</th>
-                            <th>No. of available Seats</th>
-                            <th>Fare</th>
-                            <th>Arrival Time</th>
-                            <th>Duration</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Row 1 Data 1</td>
-                            <td>Row 1 Data 2</td>
-                            <td>Row 1 Data 2</td>
-                            <td>Row 1 Data 2</td>
-                            <td>Row 1 Data 2</td>
-                        </tr>
-                        <tr>
-                            <td>Row 1 Data 1</td>
-                            <td>Row 1 Data 2</td>
-                            <td>Row 1 Data 2</td>
-                            <td>Row 1 Data 2</td>
-                            <td>Row 1 Data 2</td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
+            <table id="table_id"
+                class="display">
+                <thead>
+                    <tr>
+                        <th>Bus name</th>
+                        <th>No. of available Seats</th>
+                        <th>Fare</th>
+                        <th>Arrival Time</th>
+                        <th>Duration</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn"
+                                    id="book">
+                                    Book >
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn"
+                                    id="book">
+                                    Book >
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
