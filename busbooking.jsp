@@ -15,7 +15,7 @@
         <!--===============================================================================================-->
         <link rel="stylesheet"
             type="text/css"
-            href="vendor/bootstrap/css/bootstrap.min.css">
+            href="vendor/bootstrap/css/bootstrap.css">
         <!--===============================================================================================-->
         <link rel="stylesheet"
             type="text/css"
@@ -148,15 +148,24 @@
                         <span class="focus-input100"></span>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                     <div class="wrap-input100 validate-input m-b-16"
                         data-validate="Username is required">
                         <input class="input100"
                             id="Date"
                             type="text"
                             name="username"
+                            required
                             placeholder="Date">
                         <span class="focus-input100"></span>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn"
+                            id="login">
+                            Search
+                        </button>
                     </div>
                 </div>
 
