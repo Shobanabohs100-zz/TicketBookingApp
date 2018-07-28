@@ -24,26 +24,10 @@
     <!--===============================================================================================-->
     <link rel="stylesheet"
         type="text/css"
-        href="vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet"
-        type="text/css"
-        href="vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet"
-        type="text/css"
-        href="vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet"
-        type="text/css"
         href="vendor/select2/select2.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet"
-        type="text/css"
-        href="vendor/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet"
-        href="css/jquery-ui.css">
+        href="vendor/jquery-ui/jquery-ui.js">
     <!--===============================================================================================-->
     <link rel="stylesheet"
         type="text/css"
@@ -54,109 +38,104 @@
     <!--===============================================================================================-->
 </head>
 
-<body background="/resources/images/login.jpg">
-    <div class="container-fluid username">
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-50 p-b-90"
+                style="min-width:490px">
+                <form class="login100-form validate-form flex-sb flex-w">
+                    <span class="login100-form-title p-b-51">
+                        Sign Up
+                    </span>
+                    <div class="row">
+                        <div class="col-lg-6"
+                            style="text-align:center;">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input id="firstName"
+                                    type="text"
+                                    placeholder="Firstname"
+                                    required
+                                    class="input100" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6"
+                            style="text-align:center;">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input id="lastname"
+                                    type="text"
+                                    required
+                                    placeholder="Lastname"
+                                    class="input100" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input id="email"
+                                    type="text"
+                                    placeholder="Email"
+                                    required
+                                    class="input100" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6"
+                            style="text-align:center;">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input id="dob"
+                                    type="text"
+                                    placeholder="DOB"
+                                    required
+                                    class="input100" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input id="password"
+                                    type="password"
+                                    placeholder="Password"
+                                    required
+                                    class="input100" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input id="confirm_password"
+                                    class="input100"
+                                    type="password"
+                                    placeholder="Confirm Password"
+                                    required
+                                    class="input100" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input id="mobile"
+                                    type="text"
+                                    placeholder="Mobile"
+                                    required
+                                    class="input100" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input id="address"
+                                    type="text"
+                                    placeholder="Address"
+                                    required
+                                    class="input100" />
+                            </div>
+                        </div>
 
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <div class="col-lg-2"> </div>
-            <div class="col-lg-8"
-                style="padding:25px;">
-                <input id="firstName"
-                    type="text"
-                    placeholder="Firstname"
-                    class="input" />
+                        <div class="container-login100-form-btn m-t-17">
+                            <div class="col-lg-12">
+                                <button class="login100-form-btn"
+                                    id="login">
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="col-lg-2"> </div>
-        </div>
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <div class="col-lg-2"> </div>
-            <div class="col-lg-8"
-                style="padding:25px;">
-                <input id="lastname"
-                    type="text"
-                    placeholder="Lastname"
-                    class="input" />
-            </div>
-            <div class="col-lg-2"> </div>
-        </div>
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <div class="col-lg-2"> </div>
-            <div class="col-lg-8"
-                style="padding:25px;">
-                <input id="email"
-                    type="text"
-                    placeholder="Email"
-                    class="input" />
-            </div>
-            <div class="col-lg-2"> </div>
-        </div>
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <div class="col-lg-2"> </div>
-            <div class="col-lg-8"
-                style="padding:25px;">
-                <input id="dob"
-                    type="text"
-                    placeholder="DOB"
-                    class="input" />
-            </div>
-            <div class="col-lg-2"> </div>
-        </div>
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <div class="col-lg-2"> </div>
-            <div class="col-lg-8"
-                style="padding:25px;">
-                <input id="password"
-                    type="password"
-                    placeholder="Password"
-                    class="input" />
-            </div>
-            <div class="col-lg-2"> </div>
-        </div>
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <div class="col-lg-2"> </div>
-            <div class="col-lg-8"
-                style="padding:25px;">
-                <input id="confirm_password"
-                    type="password"
-                    placeholder="Confirm Password"
-                    class="input" />
-            </div>
-            <div class="col-lg-2"> </div>
-        </div>
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <div class="col-lg-2"> </div>
-            <div class="col-lg-8"
-                style="padding:25px;">
-                <input id="mobile"
-                    type="text"
-                    placeholder="Mobile"
-                    class="input" />
-            </div>
-            <div class="col-lg-2"> </div>
-        </div>
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <div class="col-lg-2"> </div>
-            <div class="col-lg-8"
-                style="padding:25px;">
-                <input id="address"
-                    type="text"
-                    placeholder="Address"
-                    class="input" />
-            </div>
-            <div class="col-lg-2"> </div>
-        </div>
-        <div class="col-lg-12"
-            style="text-align:center;">
-            <button id="submit"
-                style="width:100px;">Create</button>
         </div>
     </div>
 

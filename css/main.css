@@ -421,7 +421,39 @@ iframe {
     opacity: 1;
   }
 }
+.select2.select2-container{
+  width:100%!important;
+}
+.select2-selection.select2-selection--single{
+  background: transparent;
+  border: none;
+  height: 62px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  font-family: Ubuntu-Bold;
+  color: #403866;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 62px;
+  padding: 0 20px 0 38px;
+  line-height: 56px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 58px;
+}
+.select2-results__option[aria-selected]{
+  padding: 0 20px 0 38px;
+  font-size: 16px;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field{
+  padding: 0 20px 0 38px;
+}
 
+.dataTables_wrapper{
+  width: 100%;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ Responsive ]*/

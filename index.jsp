@@ -1,38 +1,44 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
-    <title>TicketBooking</title>
+    <title>Online ticket booking</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->	
-        <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="icon"
+        type="image/png"
+        href="images/icons/favicon.ico" />
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <!--===============================================================================================-->	
-        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="vendor/select2/select2.min.css">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <!--===============================================================================================-->	
-        <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->	
-        <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet"
+        href="vendor/jquery-ui/jquery-ui.js">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="css/util.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="css/util.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="css/main.css">
     <!--===============================================================================================-->
 </head>
+
 
 <body background="/resources/images/login.jpg">
     <div class="limiter">
@@ -78,12 +84,14 @@
                         </div>
 
                         <div>
-                            <a href="/view/createuseraccount.jsp" class="txt1">Signup</a> 
+                            <a href="/view/createuseraccount.jsp"
+                                class="txt1">Signup</a>
                         </div>
                     </div>
 
                     <div class="container-login100-form-btn m-t-17">
-                        <button class="login100-form-btn" id="login">
+                        <button class="login100-form-btn"
+                            id="login">
                             Login
                         </button>
                     </div>
@@ -92,7 +100,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/jquery-ui/jquery-ui.js"></script>
