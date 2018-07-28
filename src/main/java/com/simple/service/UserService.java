@@ -15,6 +15,7 @@ import com.simple.dto.ErrorDTO;
 import com.simple.dto.UserDTO;
 import com.simple.manager.UserManager;
 import com.simple.model.UserInfo;
+import com.simple.model.UserSecret;
 import com.simple.model.UserSession;
 import com.simple.translator.UserTranslator;
 
@@ -34,6 +35,7 @@ public class UserService {
 	
 	/**
 	 * Method to find the user session by token
+	 * 
 	 * @param userInfoId, primary id of the user
 	 * @param token, The token is the unique session Id.
 	 * @return {@link UserSession}
@@ -62,7 +64,22 @@ public class UserService {
 		}
 		userInfo = userTranslator.translateUSerDTO(userDTO, new UserInfo());
 		userManager.saveUser(userInfo);
+		createUserSecret(userDTO, userInfo.getId());
 		return userInfo;
+	}
+	
+	/**
+	 * Method to create user secret
+	 * 
+	 * @param userDTO, the object of UserDTO
+	 * @param userId, primary Id of the user
+	 */
+	private void createUserSecret(UserDTO userDTO, String userId) {
+		
+		UserSecret userSecret = new UserSecret();
+		userSecret.setUserInfoId(userId);
+		userSecret.setSecret(userDTO.getPassword());
+		userManager.saveUserSecret(userSecret);
 	}
 	
 	/**

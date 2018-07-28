@@ -1,48 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
-    <title>TicketBooking</title>
+    <title>Online ticket booking</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->	
-        <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/resources/images/icons/favicon.ico"/>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="icon"
+        type="image/png"
+        href="${pageContext.request.contextPath}/resources/images/icons/favicon.ico" />
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="${pageContext.request.contextPath}/resources/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="${pageContext.request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/animate/animate.css">
-    <!--===============================================================================================-->	
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="${pageContext.request.contextPath}/resources/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="${pageContext.request.contextPath}/resources/vendor/select2/select2.min.css">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/select2/select2.min.css">
-    <!--===============================================================================================-->	
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendor/daterangepicker/daterangepicker.css">
-    <!--===============================================================================================-->	
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery-ui.css">
+    <link rel="stylesheet"
+        href="${pageContext.request.contextPath}/resources/vendor/jquery-ui/jquery-ui.js">
     <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/util.css">
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="${pageContext.request.contextPath}/resources/css/util.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="${pageContext.request.contextPath}/resources/css/main.css">
     <!--===============================================================================================-->
-     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/jquery-ui/jquery-ui.js"></script>
     <script src="js/main.js"></script>
-    
 </head>
 
-<body >
+
+<body background="/resources/images/login.jpg">
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-90">
@@ -86,12 +92,14 @@
                         </div>
 
                         <div>
-                            <a href="/view/createuseraccount.jsp" class="txt1">Signup</a> 
+                            <a href="/view/createuseraccount.jsp"
+                                class="txt1">Signup</a>
                         </div>
                     </div>
 
                     <div class="container-login100-form-btn m-t-17">
-                        <button class="login100-form-btn" id="login">
+                        <button class="login100-form-btn"
+                            id="login">
                             Login
                         </button>
                     </div>
@@ -100,7 +108,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Custom JS files -->
     <script>
         $(document).ready(function () {

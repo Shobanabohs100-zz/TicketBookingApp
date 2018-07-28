@@ -1,153 +1,336 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="/resource/scripts/bootstrap.min.js"></script>
-    <link href="/resource/css/bootstrap.css" rel="stylesheet" />
+    <!DOCTYPE html>
+    <html>
 
-    <script>
-    $(function () {
-        function log(message) {
-            $("<div>").text(message).prependTo("#log");
-            $("#log").scrollTop(0);
-        }
+    <head>
+        <title>Online ticket booking</title>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->
+        <link rel="icon"
+            type="image/png"
+            href="${pageContext.request.contextPath}/resources/images/icons/favicon.ico" />
+        <!--===============================================================================================-->
+        <link rel="stylesheet"
+            type="text/css"
+            href="${pageContext.request.contextPath}/resources/vendor/bootstrap/css/bootstrap.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet"
+            type="text/css"
+            href="${pageContext.request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet"
+            type="text/css"
+            href="${pageContext.request.contextPath}/resources/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet"
+            type="text/css"
+            href="${pageContext.request.contextPath}/resources/vendor/select2/select2.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet"
+            href="${pageContext.request.contextPath}/resources/vendor/jquery-ui/jquery-ui.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet"
+            href="${pageContext.request.contextPath}/resources/vendor/jquery-datatable/css/jquery.dataTables.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet"
+            type="text/css"
+            href="${pageContext.request.contextPath}/resources/css/util.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet"
+            type="text/css"
+            href="${pageContext.request.contextPath}/resources/css/main.css">
+        <!--===============================================================================================-->
+    </head>
 
-        $("#source").autocomplete({
-            source: function (request, response) {
-                $.ajax({
-                	type: 'GET',
-                    url: 'http://localhost:8080/location',
-                    dataType: 'json',
-                    data: {
-                        q: request.term,
-                        locationType : "SOURCE"
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button"
+                        class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#navbar"
+                        aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"
+                        href="#">Project name</a>
+                </div>
+                <div id="navbar"
+                    class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"
+                                class="dropdown-toggle"
+                                data-toggle="dropdown"
+                                role="button"
+                                aria-haspopup="true"
+                                aria-expanded="false">Dropdown
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Action</a>
+                                </li>
+                                <li>
+                                    <a href="#">Another action</a>
+                                </li>
+                                <li>
+                                    <a href="#">Something else here</a>
+                                </li>
+                                <li role="separator"
+                                    class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li>
+                                    <a href="#">Separated link</a>
+                                </li>
+                                <li>
+                                    <a href="#">One more separated link</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="./">Default
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../navbar-static-top/">Static top</a>
+                        </li>
+                        <li>
+                            <a href="../navbar-fixed-top/">Fixed top</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="wrap-input100 validate-input m-b-16"
+                        data-validate="Username is required">
+                        <select class="js-example-basic-single"
+                            name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                        <span class="focus-input100"></span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="wrap-input100 validate-input m-b-16"
+                        data-validate="Username is required">
+                        <select class="js-example-basic-single"
+                            name="state">
+                            <option value="AL">Alabama</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                        <span class="focus-input100"></span>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="wrap-input100 validate-input m-b-16"
+                        data-validate="Username is required">
+                        <input class="input100"
+                            id="Date"
+                            type="text"
+                            name="username"
+                            required
+                            placeholder="Date">
+                        <span class="focus-input100"></span>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn"
+                            id="login">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <table id="table_id"
+                class="display">
+                <thead>
+                    <tr>
+                        <th>Bus name</th>
+                        <th>No. of available Seats</th>
+                        <th>Fare</th>
+                        <th>Arrival Time</th>
+                        <th>Duration</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn"
+                                    id="book">
+                                    Book >
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>Row 1 Data 2</td>
+                        <td>
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn"
+                                    id="book">
+                                    Book >
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendor/jquery-ui/jquery-ui.js"></script>
+        <script src="vendor/select2/select2.min.js"></script>
+        <script src="vendor/jquery-datatable/js/jquery.dataTables.min.js"></script>
+        <script src="js/main.js"></script>
+        <!-- Custom JS files -->
+        <script>
+            $(function () {
+                $(document).ready(function () {
+                    $('#table_id').DataTable();
+                    $('.js-example-basic-single').select2();
+                    $("#Date").datepicker();
+                });
+                function log(message) {
+                    $("<div>").text(message).prependTo("#log");
+                    $("#log").scrollTop(0);
+                }
+
+                $("#source").autocomplete({
+                    source: function (request, response) {
+                        $.ajax({
+                            type: 'GET',
+                            url: 'http://localhost:8080/location',
+                            dataType: 'json',
+                            data: {
+                                q: request.term,
+                                locationType: "SOURCE"
+                            },
+                            success: function (data) {
+                                response($.map(data, function (value) {
+                                    return {
+                                        label: value
+                                    };
+                                }));
+                            }
+                        });
                     },
-                    success: function (data) {
-                    	 response($.map(data, function (value) {
-                    		 return {
-                    			 label: value }; 
-                    		 }));
+                    minLength: 3,
+                    select: function (event, ui) {
+                        log(ui.item ?
+                            "Selected: " + ui.item.label :
+                            "Nothing selected, input was " + this.value);
+                    },
+                    open: function () {
+                        $(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+                    },
+                    close: function () {
+                        $(this).removeClass("ui-corner-top").addClass("ui-corner-all");
                     }
                 });
-            },
-            minLength: 3,
-            select: function (event, ui) {
-                log(ui.item ?
-                  "Selected: " + ui.item.label :
-                  "Nothing selected, input was " + this.value);
-            },
-            open: function () {
-                $(this).removeClass("ui-corner-all").addClass("ui-corner-top");
-            },
-            close: function () {
-                $(this).removeClass("ui-corner-top").addClass("ui-corner-all");
-            }
-        });
-        
-        $('#search').click(function () {
-        	
-        	var request = {
-        		    source = $("#source").val();
-        			destination = $("#destination").val();
-        			journeydate = $("#journeydate").val();
-        			
-        	}
 
-            $.ajax({
+                $('#search').click(function () {
 
-                type: 'POST',
+                    var request = {
+                        source: $("#source").val(),
+                        destination: $("#destination").val(),
+                        journeydate: $("#journeydate").val()
+                    }
 
-                url: 'localhost:8080/travel-detail',
+                    $.ajax({
 
-                data: request,
+                        type: 'POST',
 
-                dataType: "json", //to parse string into JSON object,
+                        url: 'localhost:8080/travel-detail',
 
-                success: function (data) {
+                        data: request,
 
-                    if (data) {
+                        dataType: "json", //to parse string into JSON object,
 
-                        var len = data.length;
+                        success: function (data) {
 
-                        var txt = "";
+                            if (data) {
 
-                        if (len > 0) {
+                                var len = data.length;
 
-                            for (var i = 0; i < len; i++) {
+                                var txt = "";
 
-                                if (data[i].city && data[i].cStatus) {
+                                if (len > 0) {
 
-                                    txt += "<tr><td>" + data[i].city + "</td><td>" + data[i].cStatus + "</td></tr>";
+                                    for (var i = 0; i < len; i++) {
+
+                                        if (data[i].city && data[i].cStatus) {
+
+                                            txt += "<tr><td>" + data[i].city + "</td><td>" + data[i].cStatus + "</td></tr>";
+
+                                        }
+
+                                    }
+
+                                    if (txt != "") {
+
+                                        $("#table").append(txt).removeClass("hidden");
+
+                                    }
 
                                 }
 
                             }
 
-                            if (txt != "") {
+                        },
 
-                                $("#table").append(txt).removeClass("hidden");
+                        error: function (jqXHR, textStatus, errorThrown) {
 
-                            }
+                            alert('error: ' + textStatus + ': ' + errorThrown);
 
                         }
 
-                    }
+                    });
 
-                },
+                    return false;//suppress natural form submission
 
-                error: function (jqXHR, textStatus, errorThrown) {
-
-                    alert('error: ' + textStatus + ': ' + errorThrown);
-
-                }
-
+                });
             });
 
-            return false;//suppress natural form submission
+        </script>
+    </body>
 
-        });
-    });
-   
-    </script>
-</head>
-<body>
-<div class="container-fluid" style="max-width:1200px;border:1px solid #565656;background-color:#fff;height:700px;padding:25px;">
-    <div class="col-lg-12">
-      <div class="col-lg-4">
-          <input type="text" id="source" style="width:100%;" autocomplete="off"/>
-      </div>
-        <div class="col-lg-4">
-            <input type="text" id="destination" style="width:100%;" />
-        </div>
-        <div class="col-lg-4">
-            <input type="text" style="width:100%;" />
-        </div>
-    </div>
-</div>
-
-
-    <!--<div class="ui-widget">
-        <label for="city">Your city: </label>
-        <input id="city">
-        Powered by <a href="http://geonames.org">geonames.org</a>
-    </div>-->
-
-    <!--<div class="ui-widget" style="margin-top:2em; font-family:Arial">
-        Result:
-        <div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
-    </div>-->
-</body>
-</html>
-
-
-
-
-
+    </html>

@@ -77,6 +77,16 @@ public class UserManager {
 	}
 	
 	/**
+	 * Method to save the user secret
+	 * 
+	 * @param userSecret, the object of UserSecret
+	 * @return {@link UserSecret}
+	 */
+	public UserSecret saveUserSecret(UserSecret userSecret) {
+		return userSecretRepository.save(userSecret);
+	}
+	
+	/**
 	 * Method to find user by id
 	 * 
 	 * @param id, primary key of the user

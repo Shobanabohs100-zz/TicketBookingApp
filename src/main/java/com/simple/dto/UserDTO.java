@@ -15,6 +15,7 @@ public class UserDTO extends BaseDTO {
 	private String emailAddress;
 	private String phoneNumber;
 	private String address;
+	private String password;
 	private String role;
 
 	/**
@@ -100,6 +101,18 @@ public class UserDTO extends BaseDTO {
 	 */
 	public void setRole(String role) {
 		this.role = role;
+	}
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }
