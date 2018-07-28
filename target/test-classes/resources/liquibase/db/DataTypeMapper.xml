@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <property name="type.varchar36" value="varchar(36)" dbms="mysql,db2,mssql,oracle,postgresql"/>
+<property name="type.varchar255" value="varchar(255)" dbms="mysql,db2,mssql,oracle,postgresql"/>
+<property name="type.varchar500" value="varchar(500)" dbms="mysql,db2,mssql,oracle,postgresql"/>
+<property name="type.timestamp" value="TIMESTAMP" dbms="mysql,db2,oracle,postgresql"/>
+<property name="type.timestamp" value="datetime" dbms="mssql"/>
+<property name="type.varchar2500" value="varchar(2500)" dbms="mysql,db2,mssql,oracle,postgresql"/>
+ -->

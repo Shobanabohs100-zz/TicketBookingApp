@@ -1,0 +1,15 @@
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Electronics',null,'8ad602a6-bbdc-4f48-8612-bf21776ba70c',1);
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Mobile','8ad602a6-bbdc-4f48-8612-bf21776ba70c','8ad602a6-bbdc-4f48-8612-bf21775ba70c',1);
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Laptop','8ad602a6-bbdc-4f48-8612-bf21776ba70c','8ad602a6-bbdc-4f48-8612-bf21774ba70c',1);
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Tablet','8ad602a6-bbdc-4f48-8612-bf21776ba70c','8ad602a6-bbdc-4f48-8612-bf21773ba70c',1);
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Printer','8ad602a6-bbdc-4f48-8612-bf21776ba70c','8ad602a6-bbdc-4f48-8612-bf21772ba70c',1);
+
+
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Fashion',null,'8ad602a6-bbdc-4f48-8613-bf21776ba70c',1);
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Clothing','8ad602a6-bbdc-4f48-8613-bf21776ba70c','8ad602a6-bbdc-5f48-8612-bf21775ba70c',1);
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Watches','8ad602a6-bbdc-4f48-8613-bf21776ba70c','8ad602a6-bbdc-6f48-8612-bf21774ba70c',1);
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Shoes','8ad602a6-bbdc-4f48-8613-bf21776ba70c','8ad602a6-bbdc-7f48-8612-bf21773ba70c',1);
+insert into ecommerce.category (name,parent_category_id,id,is_active) values ('Sunglasses','8ad602a6-bbdc-4f48-8613-bf21776ba70c','8ad602a6-bbdc-8f48-8612-bf21772ba70c',1);
+
+insert into ecommerce.product (product_name,category_id,info,description,seller,quantity,id,is_active,amount) values ('Nokia 1100','8ad602a6-bbdc-4f48-8612-bf21775ba70c','Arrived new','long battery','4COM retailler',15,'8ad602a6-bbdc-5f48-8612-bf21775ba70a',1,2000);
+insert into ecommerce.product (product_name,category_id,info,description,seller,quantity,id,is_active,amount) values ('HP Printer','8ad602a6-bbdc-4f48-8612-bf21772ba70c','Laser printer','Easy to print with','4COM retailler',12,'8ad602a6-bbdc-5f48-8612-bf21775ba70b',1,4500);
