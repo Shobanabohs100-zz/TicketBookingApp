@@ -455,5 +455,24 @@ iframe {
   width: 100%;
 }
 
+/** nav bar **/
+.navbar.navbar-default{
+  min-height: 90px;
+  -webkit-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px -2px rgba(0,0,0,0.75);
+  margin-bottom: 10px;
+}
+ul.nav.navbar-nav{
+  display: block;
+}
+ul.nav.navbar-nav li {
+  display: inline-block;
+  min-width: 100px;
+}
+.navbar-brand img.nav-logo{
+  max-width: 72px;
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ Responsive ]*/
